@@ -1,15 +1,15 @@
+import { type } from "@testing-library/user-event/dist/type";
 import MovieScore from "components/MovieScore";
 import { Link } from "react-router-dom";
+import { Movie } from "types/movie";
 
-function MovieCard() {
 
-    const movie = {
-        id: 1,
-        image: "https://www.themoviedb.org/t/p/w500_and_h282_face/fq3wyOs1RHyz2yfzsb4sck7aWRG.jpg",
-        title: "Back to the Future",
-        count: 2,
-        score: 4.5
-    };
+type Props = {
+    movie: Movie;
+}
+
+
+function MovieCard( { movie } : Props ) {
 
     return (
         <div>
